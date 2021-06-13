@@ -9,7 +9,7 @@ class Task(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) var id: Long? = null,
     var title: String,
     var content: String,
-    var startDate: LocalDateTime,
-    var endDate: LocalDateTime
+    var startDate: LocalDateTime? = null,
+    var endDate: LocalDateTime? = null
 ) {
 }
