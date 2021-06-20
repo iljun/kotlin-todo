@@ -31,6 +31,7 @@ dependencies {
     runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
+    testImplementation("org.junit.jupiter:junit-jupiter-params")
 }
 
 tasks.withType<KotlinCompile> {
@@ -52,3 +53,4 @@ tasks.asciidoctor {
     inputs.dir(snippetsDir)
     dependsOn(tasks.test)
 }
+

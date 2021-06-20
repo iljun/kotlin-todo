@@ -1,5 +1,6 @@
 package me.iljun.todo.domain.task
 
+import me.iljun.todo.domain.comment.Comments
 import java.time.LocalDateTime
 import javax.persistence.*
 
@@ -10,6 +11,8 @@ class Task(
     var title: String,
     var content: String,
     var startDate: LocalDateTime? = null,
-    var endDate: LocalDateTime? = null
+    var endDate: LocalDateTime? = null,
+    @Embedded
+    var comments:Comments? = null
 ) {
 }
